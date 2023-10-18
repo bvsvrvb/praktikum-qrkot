@@ -15,6 +15,10 @@
 
 Каждый пользователь может сделать пожертвование и сопроводить его комментарием. Пожертвования не целевые: они вносятся в фонд, а не в конкретный проект. Каждое полученное пожертвование автоматически добавляется в первый открытый проект, который ещё не набрал нужную сумму. Если пожертвование больше нужной суммы или же в Фонде нет открытых проектов — оставшиеся деньги ждут открытия следующего проекта. При создании нового проекта все неинвестированные пожертвования автоматически вкладываются в новый проект.
 
+#### Отчёт в Google Sheets
+
+В приложении также реализована возможность формирования в гугл-таблице отчёта с закрытыми проектами, отсортированными по скорости сбора средств.
+
 ## Технологии
 
 [![Python](https://img.shields.io/badge/Python-3.9-000000?logo=python)](https://www.python.org/)
@@ -29,21 +33,33 @@
 Клонировать репозиторий и перейти в директорию проекта:
 
 ```bash
-git clone https://github.com/bvsvrvb/cat_charity_fund.git
+git clone https://github.com/bvsvrvb/qrkot_spreadsheets.git
 ```
 
 ```bash
-cd cat_charity_fund
+cd qrkot_spreadsheets
 ```
 
 Создать `.env` файл с переменными окружения:
 
 ```
-DATABASE_URL=sqlite+aiosqlite:///./fastapi.db
-SECRET=some_secret_phrase
-FIRST_SUPERUSER_EMAIL=admin@example.com
-FIRST_SUPERUSER_PASSWORD=admin
-PASSWORD_MIN_LEN=3
+DATABASE_URL="sqlite+aiosqlite:///./fastapi.db"
+SECRET="..."
+FIRST_SUPERUSER_EMAIL="admin@example.com"
+FIRST_SUPERUSER_PASSWORD="admin"
+PASSWORD_MIN_LEN="3"
+EMAIL="..."
+TYPE="service_account"
+PROJECT_ID="..."
+PRIVATE_KEY_ID="..."
+PRIVATE_KEY="..."
+CLIENT_EMAIL="..."
+CLIENT_ID="..."
+AUTH_URI="https://accounts.google.com/o/oauth2/auth"
+TOKEN_URI="https://oauth2.googleapis.com/token"
+AUTH_PROVIDER_X509_CERT_URL="https://www.googleapis.com/oauth2/v1/certs"
+CLIENT_X509_CERT_URL="..."
+UNIVERSE_DOMAIN="googleapis.com"
 ```
 
 Cоздать и активировать виртуальное окружение:
@@ -77,3 +93,7 @@ alembic upgrade head
 ```bash
 uvicorn app.main:app --reload
 ```
+
+## Автор
+
+[Vlad Basarab](https://github.com/bvsvrvb)

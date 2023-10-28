@@ -27,17 +27,18 @@
 [![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-1.4-000000)](https://www.sqlalchemy.org/)
 [![Alembic](https://img.shields.io/badge/Alembic-1.7-000000)](https://alembic.sqlalchemy.org/)
 [![Uvicorn](https://img.shields.io/badge/Uvicorn-0.17-000000)](https://www.uvicorn.org/)
+[![Aiogoogle](https://img.shields.io/badge/Aiogoogle-5.5.0-000000)](https://aiogoogle.readthedocs.io/)
 
 ## Локальный запуск проекта
 
 Клонировать репозиторий и перейти в директорию проекта:
 
 ```bash
-git clone https://github.com/bvsvrvb/qrkot_spreadsheets.git
+git clone https://github.com/bvsvrvb/praktikum-qrkot.git
 ```
 
 ```bash
-cd qrkot_spreadsheets
+cd praktikum-qrkot
 ```
 
 Создать `.env` файл с переменными окружения:
